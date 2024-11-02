@@ -32,10 +32,10 @@
             label1 = new Label();
             groupBox1 = new GroupBox();
             btnExit = new Assets.CusButton();
-            cusButton3 = new Assets.CusButton();
-            cusButton2 = new Assets.CusButton();
-            cusButton1 = new Assets.CusButton();
-            comboBox1 = new ComboBox();
+            btnXoa = new Assets.CusButton();
+            btnThem = new Assets.CusButton();
+            btnUpdate = new Assets.CusButton();
+            cbLoaiNV = new ComboBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
             lst1 = new ListBox();
@@ -74,10 +74,10 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btnExit);
-            groupBox1.Controls.Add(cusButton3);
-            groupBox1.Controls.Add(cusButton2);
-            groupBox1.Controls.Add(cusButton1);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(btnXoa);
+            groupBox1.Controls.Add(btnThem);
+            groupBox1.Controls.Add(btnUpdate);
+            groupBox1.Controls.Add(cbLoaiNV);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(12, 72);
             groupBox1.Name = "groupBox1";
@@ -105,68 +105,71 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
-            // cusButton3
+            // btnXoa
             // 
-            cusButton3.BackColor = Color.Teal;
-            cusButton3.BackgroundColor = Color.Teal;
-            cusButton3.BorderColor = Color.PaleVioletRed;
-            cusButton3.BorderRadius = 20;
-            cusButton3.BorderSize = 0;
-            cusButton3.FlatAppearance.BorderSize = 0;
-            cusButton3.FlatStyle = FlatStyle.Flat;
-            cusButton3.ForeColor = Color.White;
-            cusButton3.Location = new Point(291, 88);
-            cusButton3.Name = "cusButton3";
-            cusButton3.Size = new Size(178, 43);
-            cusButton3.TabIndex = 4;
-            cusButton3.Text = "Xóa";
-            cusButton3.TextColor = Color.White;
-            cusButton3.UseVisualStyleBackColor = false;
+            btnXoa.BackColor = Color.Teal;
+            btnXoa.BackgroundColor = Color.Teal;
+            btnXoa.BorderColor = Color.PaleVioletRed;
+            btnXoa.BorderRadius = 20;
+            btnXoa.BorderSize = 0;
+            btnXoa.FlatAppearance.BorderSize = 0;
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.ForeColor = Color.White;
+            btnXoa.Location = new Point(291, 88);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(178, 43);
+            btnXoa.TabIndex = 4;
+            btnXoa.Text = "Xóa";
+            btnXoa.TextColor = Color.White;
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // cusButton2
+            // btnThem
             // 
-            cusButton2.BackColor = Color.Teal;
-            cusButton2.BackgroundColor = Color.Teal;
-            cusButton2.BorderColor = Color.PaleVioletRed;
-            cusButton2.BorderRadius = 20;
-            cusButton2.BorderSize = 0;
-            cusButton2.FlatAppearance.BorderSize = 0;
-            cusButton2.FlatStyle = FlatStyle.Flat;
-            cusButton2.ForeColor = Color.White;
-            cusButton2.Location = new Point(541, 29);
-            cusButton2.Name = "cusButton2";
-            cusButton2.Size = new Size(178, 43);
-            cusButton2.TabIndex = 3;
-            cusButton2.Text = "Thêm mới";
-            cusButton2.TextColor = Color.White;
-            cusButton2.UseVisualStyleBackColor = false;
+            btnThem.BackColor = Color.Teal;
+            btnThem.BackgroundColor = Color.Teal;
+            btnThem.BorderColor = Color.PaleVioletRed;
+            btnThem.BorderRadius = 20;
+            btnThem.BorderSize = 0;
+            btnThem.FlatAppearance.BorderSize = 0;
+            btnThem.FlatStyle = FlatStyle.Flat;
+            btnThem.ForeColor = Color.White;
+            btnThem.Location = new Point(541, 29);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(178, 43);
+            btnThem.TabIndex = 3;
+            btnThem.Text = "Thêm mới";
+            btnThem.TextColor = Color.White;
+            btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
-            // cusButton1
+            // btnUpdate
             // 
-            cusButton1.BackColor = Color.Teal;
-            cusButton1.BackgroundColor = Color.Teal;
-            cusButton1.BorderColor = Color.PaleVioletRed;
-            cusButton1.BorderRadius = 20;
-            cusButton1.BorderSize = 0;
-            cusButton1.FlatAppearance.BorderSize = 0;
-            cusButton1.FlatStyle = FlatStyle.Flat;
-            cusButton1.ForeColor = Color.White;
-            cusButton1.Location = new Point(291, 29);
-            cusButton1.Name = "cusButton1";
-            cusButton1.Size = new Size(178, 43);
-            cusButton1.TabIndex = 2;
-            cusButton1.Text = "Sửa tên";
-            cusButton1.TextColor = Color.White;
-            cusButton1.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.Teal;
+            btnUpdate.BackgroundColor = Color.Teal;
+            btnUpdate.BorderColor = Color.PaleVioletRed;
+            btnUpdate.BorderRadius = 20;
+            btnUpdate.BorderSize = 0;
+            btnUpdate.FlatAppearance.BorderSize = 0;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(291, 29);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(178, 43);
+            btnUpdate.TabIndex = 2;
+            btnUpdate.Text = "Sửa tên";
+            btnUpdate.TextColor = Color.White;
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // comboBox1
+            // cbLoaiNV
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Quản lý", "Lễ tân", "Vệ sinh" });
-            comboBox1.Location = new Point(20, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(214, 28);
-            comboBox1.TabIndex = 1;
+            cbLoaiNV.FormattingEnabled = true;
+            cbLoaiNV.Location = new Point(20, 75);
+            cbLoaiNV.Name = "cbLoaiNV";
+            cbLoaiNV.Size = new Size(214, 28);
+            cbLoaiNV.TabIndex = 1;
+            cbLoaiNV.SelectedIndexChanged += cbLoaiNV_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -191,7 +194,6 @@
             // 
             lst1.FormattingEnabled = true;
             lst1.ImeMode = ImeMode.NoControl;
-            lst1.Items.AddRange(new object[] { "Đặt phòng", "Nhận phòng", "Sử dụng dịch vụ và thanh toán" });
             lst1.Location = new Point(6, 26);
             lst1.Name = "lst1";
             lst1.Size = new Size(330, 344);
@@ -211,7 +213,6 @@
             // 
             lst2.FormattingEnabled = true;
             lst2.ImeMode = ImeMode.NoControl;
-            lst2.Items.AddRange(new object[] { "Quản lý nhân viên", "Quản lý khách hàng", "Quản lý hóa đơn" });
             lst2.Location = new Point(6, 26);
             lst2.Name = "lst2";
             lst2.Size = new Size(330, 344);
@@ -274,6 +275,7 @@
             Name = "AccessRole";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AccessRole";
+            Load += AccessRole_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -289,10 +291,10 @@
         private Label label1;
         private GroupBox groupBox1;
         private Assets.CusButton btnExit;
-        private Assets.CusButton cusButton3;
-        private Assets.CusButton cusButton2;
-        private Assets.CusButton cusButton1;
-        private ComboBox comboBox1;
+        private Assets.CusButton btnXoa;
+        private Assets.CusButton btnThem;
+        private Assets.CusButton btnUpdate;
+        private ComboBox cbLoaiNV;
         private Label label2;
         private GroupBox groupBox2;
         private ListBox lst1;

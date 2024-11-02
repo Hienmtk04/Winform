@@ -28,25 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UseServicePayment));
             pnlTitle = new Panel();
             label1 = new Label();
             pnlMain = new Panel();
             groupBox6 = new GroupBox();
-            dataGridView3 = new DataGridView();
+            dtgHoadonDV = new DataGridView();
             stt = new DataGridViewTextBoxColumn();
             NameService = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             Quantity = new DataGridViewTextBoxColumn();
             TotalService = new DataGridViewTextBoxColumn();
             groupBox5 = new GroupBox();
-            dataGridView2 = new DataGridView();
-            Index = new DataGridViewTextBoxColumn();
-            Name = new DataGridViewTextBoxColumn();
-            heso = new DataGridViewTextBoxColumn();
-            description = new DataGridViewTextBoxColumn();
+            dtgPhuThu = new DataGridView();
             groupBox4 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dtgHoaDon = new DataGridView();
             NameRoom = new DataGridViewTextBoxColumn();
             PriceService = new DataGridViewTextBoxColumn();
             DateCheckin = new DataGridViewTextBoxColumn();
@@ -55,28 +50,26 @@
             OtherPrice = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
-            btnPayment = new Assets.CusButton();
-            numericUpDown2 = new NumericUpDown();
-            textBox2 = new TextBox();
+            btnThanhToan = new Assets.CusButton();
+            nbGiamGia = new NumericUpDown();
+            tbTongTien = new TextBox();
             label12 = new Label();
             label13 = new Label();
             groupBox2 = new GroupBox();
-            btnAddService = new Assets.CusButton();
-            numericUpDown1 = new NumericUpDown();
-            textBox1 = new TextBox();
+            btnThemDV = new Assets.CusButton();
+            nbSoLuong = new NumericUpDown();
+            tbGia = new TextBox();
             label10 = new Label();
             label11 = new Label();
-            comboBox2 = new ComboBox();
+            cbDichVu = new ComboBox();
             label9 = new Label();
-            comboBox1 = new ComboBox();
+            cbLoaiDV = new ComboBox();
             label8 = new Label();
             groupBox1 = new GroupBox();
+            panelRoom = new FlowLayoutPanel();
             panel6 = new Panel();
-            pictureBox2 = new PictureBox();
+            picRoom = new PictureBox();
             label7 = new Label();
-            panel5 = new Panel();
-            pictureBox1 = new PictureBox();
-            label6 = new Label();
             panel4 = new Panel();
             label5 = new Label();
             panel3 = new Panel();
@@ -88,20 +81,19 @@
             pnlTitle.SuspendLayout();
             pnlMain.SuspendLayout();
             groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoadonDV).BeginInit();
             groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgPhuThu).BeginInit();
             groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoaDon).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nbGiamGia).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nbSoLuong).BeginInit();
             groupBox1.SuspendLayout();
+            panelRoom.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRoom).BeginInit();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -146,26 +138,26 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(dataGridView3);
+            groupBox6.Controls.Add(dtgHoadonDV);
             groupBox6.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
             groupBox6.ForeColor = Color.Teal;
-            groupBox6.Location = new Point(293, 635);
+            groupBox6.Location = new Point(293, 389);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(884, 471);
+            groupBox6.Size = new Size(884, 453);
             groupBox6.TabIndex = 14;
             groupBox6.TabStop = false;
             groupBox6.Text = "Hóa đơn dịch vụ";
             // 
-            // dataGridView3
+            // dtgHoadonDV
             // 
-            dataGridView3.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { stt, NameService, Price, Quantity, TotalService });
-            dataGridView3.Location = new Point(12, 26);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(861, 413);
-            dataGridView3.TabIndex = 0;
+            dtgHoadonDV.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dtgHoadonDV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgHoadonDV.Columns.AddRange(new DataGridViewColumn[] { stt, NameService, Price, Quantity, TotalService });
+            dtgHoadonDV.Location = new Point(12, 26);
+            dtgHoadonDV.Name = "dtgHoadonDV";
+            dtgHoadonDV.RowHeadersWidth = 51;
+            dtgHoadonDV.Size = new Size(861, 413);
+            dtgHoadonDV.TabIndex = 0;
             // 
             // stt
             // 
@@ -204,77 +196,48 @@
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(dataGridView2);
+            groupBox5.Controls.Add(dtgPhuThu);
             groupBox5.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
             groupBox5.ForeColor = Color.Teal;
-            groupBox5.Location = new Point(293, 350);
+            groupBox5.Location = new Point(293, 848);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(884, 279);
             groupBox5.TabIndex = 13;
             groupBox5.TabStop = false;
             groupBox5.Text = "Chính sách phụ thu";
             // 
-            // dataGridView2
+            // dtgPhuThu
             // 
-            dataGridView2.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Index, Name, heso, description });
-            dataGridView2.Location = new Point(12, 26);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(861, 231);
-            dataGridView2.TabIndex = 0;
-            // 
-            // Index
-            // 
-            Index.HeaderText = "STT";
-            Index.MinimumWidth = 6;
-            Index.Name = "Index";
-            Index.Width = 80;
-            // 
-            // Name
-            // 
-            Name.HeaderText = "Tên quy định";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
-            Name.Width = 150;
-            // 
-            // heso
-            // 
-            heso.HeaderText = "Hệ số";
-            heso.MinimumWidth = 6;
-            heso.Name = "heso";
-            heso.Width = 110;
-            // 
-            // description
-            // 
-            description.HeaderText = "Mô tả";
-            description.MinimumWidth = 6;
-            description.Name = "description";
-            description.Width = 470;
+            dtgPhuThu.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dtgPhuThu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgPhuThu.Location = new Point(12, 26);
+            dtgPhuThu.Name = "dtgPhuThu";
+            dtgPhuThu.RowHeadersWidth = 51;
+            dtgPhuThu.Size = new Size(861, 231);
+            dtgPhuThu.TabIndex = 0;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(dataGridView1);
+            groupBox4.Controls.Add(dtgHoaDon);
             groupBox4.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
             groupBox4.ForeColor = Color.Teal;
             groupBox4.Location = new Point(293, 210);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(884, 134);
+            groupBox4.Size = new Size(884, 163);
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             groupBox4.Text = "Hóa đơn tiền phòng";
             // 
-            // dataGridView1
+            // dtgHoaDon
             // 
-            dataGridView1.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NameRoom, PriceService, DateCheckin, DateCheckout, PriceRoom, OtherPrice, Total });
-            dataGridView1.Location = new Point(8, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(870, 99);
-            dataGridView1.TabIndex = 0;
+            dtgHoaDon.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dtgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgHoaDon.Columns.AddRange(new DataGridViewColumn[] { NameRoom, PriceService, DateCheckin, DateCheckout, PriceRoom, OtherPrice, Total });
+            dtgHoaDon.Location = new Point(8, 26);
+            dtgHoaDon.Name = "dtgHoaDon";
+            dtgHoaDon.RowHeadersWidth = 51;
+            dtgHoaDon.Size = new Size(870, 131);
+            dtgHoaDon.TabIndex = 0;
             // 
             // NameRoom
             // 
@@ -327,9 +290,9 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(btnPayment);
-            groupBox3.Controls.Add(numericUpDown2);
-            groupBox3.Controls.Add(textBox2);
+            groupBox3.Controls.Add(btnThanhToan);
+            groupBox3.Controls.Add(nbGiamGia);
+            groupBox3.Controls.Add(tbTongTien);
             groupBox3.Controls.Add(label12);
             groupBox3.Controls.Add(label13);
             groupBox3.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -341,39 +304,40 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Chức năng";
             // 
-            // btnPayment
+            // btnThanhToan
             // 
-            btnPayment.BackColor = Color.Teal;
-            btnPayment.BackgroundColor = Color.Teal;
-            btnPayment.BorderColor = Color.PaleVioletRed;
-            btnPayment.BorderRadius = 20;
-            btnPayment.BorderSize = 0;
-            btnPayment.FlatAppearance.BorderSize = 0;
-            btnPayment.FlatStyle = FlatStyle.Flat;
-            btnPayment.ForeColor = Color.White;
-            btnPayment.Location = new Point(42, 156);
-            btnPayment.Name = "btnPayment";
-            btnPayment.Size = new Size(188, 39);
-            btnPayment.TabIndex = 15;
-            btnPayment.Text = "Thanh toán";
-            btnPayment.TextColor = Color.White;
-            btnPayment.UseVisualStyleBackColor = false;
+            btnThanhToan.BackColor = Color.Teal;
+            btnThanhToan.BackgroundColor = Color.Teal;
+            btnThanhToan.BorderColor = Color.PaleVioletRed;
+            btnThanhToan.BorderRadius = 20;
+            btnThanhToan.BorderSize = 0;
+            btnThanhToan.FlatAppearance.BorderSize = 0;
+            btnThanhToan.FlatStyle = FlatStyle.Flat;
+            btnThanhToan.ForeColor = Color.White;
+            btnThanhToan.Location = new Point(42, 156);
+            btnThanhToan.Name = "btnThanhToan";
+            btnThanhToan.Size = new Size(188, 39);
+            btnThanhToan.TabIndex = 15;
+            btnThanhToan.Text = "Thanh toán";
+            btnThanhToan.TextColor = Color.White;
+            btnThanhToan.UseVisualStyleBackColor = false;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
-            // numericUpDown2
+            // nbGiamGia
             // 
-            numericUpDown2.Location = new Point(15, 110);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(243, 27);
-            numericUpDown2.TabIndex = 14;
-            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            nbGiamGia.Location = new Point(15, 110);
+            nbGiamGia.Name = "nbGiamGia";
+            nbGiamGia.Size = new Size(243, 27);
+            nbGiamGia.TabIndex = 14;
+            nbGiamGia.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // tbTongTien
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(15, 57);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(243, 27);
-            textBox2.TabIndex = 13;
+            tbTongTien.BorderStyle = BorderStyle.FixedSingle;
+            tbTongTien.Location = new Point(15, 57);
+            tbTongTien.Name = "tbTongTien";
+            tbTongTien.Size = new Size(243, 27);
+            tbTongTien.TabIndex = 13;
             // 
             // label12
             // 
@@ -395,14 +359,14 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(btnAddService);
-            groupBox2.Controls.Add(numericUpDown1);
-            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(btnThemDV);
+            groupBox2.Controls.Add(nbSoLuong);
+            groupBox2.Controls.Add(tbGia);
             groupBox2.Controls.Add(label10);
             groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(comboBox2);
+            groupBox2.Controls.Add(cbDichVu);
             groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(cbLoaiDV);
             groupBox2.Controls.Add(label8);
             groupBox2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = Color.Teal;
@@ -413,39 +377,40 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách dịch vụ";
             // 
-            // btnAddService
+            // btnThemDV
             // 
-            btnAddService.BackColor = Color.Teal;
-            btnAddService.BackgroundColor = Color.Teal;
-            btnAddService.BorderColor = Color.PaleVioletRed;
-            btnAddService.BorderRadius = 20;
-            btnAddService.BorderSize = 0;
-            btnAddService.FlatAppearance.BorderSize = 0;
-            btnAddService.FlatStyle = FlatStyle.Flat;
-            btnAddService.ForeColor = Color.White;
-            btnAddService.Location = new Point(44, 256);
-            btnAddService.Name = "btnAddService";
-            btnAddService.Size = new Size(176, 39);
-            btnAddService.TabIndex = 10;
-            btnAddService.Text = "Thêm dịch vụ";
-            btnAddService.TextColor = Color.White;
-            btnAddService.UseVisualStyleBackColor = false;
+            btnThemDV.BackColor = Color.Teal;
+            btnThemDV.BackgroundColor = Color.Teal;
+            btnThemDV.BorderColor = Color.PaleVioletRed;
+            btnThemDV.BorderRadius = 20;
+            btnThemDV.BorderSize = 0;
+            btnThemDV.FlatAppearance.BorderSize = 0;
+            btnThemDV.FlatStyle = FlatStyle.Flat;
+            btnThemDV.ForeColor = Color.White;
+            btnThemDV.Location = new Point(44, 256);
+            btnThemDV.Name = "btnThemDV";
+            btnThemDV.Size = new Size(176, 39);
+            btnThemDV.TabIndex = 10;
+            btnThemDV.Text = "Thêm dịch vụ";
+            btnThemDV.TextColor = Color.White;
+            btnThemDV.UseVisualStyleBackColor = false;
+            btnThemDV.Click += btnThemDV_Click;
             // 
-            // numericUpDown1
+            // nbSoLuong
             // 
-            numericUpDown1.Location = new Point(15, 216);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(243, 27);
-            numericUpDown1.TabIndex = 9;
-            numericUpDown1.TextAlign = HorizontalAlignment.Center;
+            nbSoLuong.Location = new Point(15, 216);
+            nbSoLuong.Name = "nbSoLuong";
+            nbSoLuong.Size = new Size(243, 27);
+            nbSoLuong.TabIndex = 9;
+            nbSoLuong.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox1
+            // tbGia
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(15, 163);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(243, 27);
-            textBox1.TabIndex = 8;
+            tbGia.BorderStyle = BorderStyle.FixedSingle;
+            tbGia.Location = new Point(15, 163);
+            tbGia.Name = "tbGia";
+            tbGia.Size = new Size(243, 27);
+            tbGia.TabIndex = 8;
             // 
             // label10
             // 
@@ -465,13 +430,14 @@
             label11.TabIndex = 4;
             label11.Text = "Giá";
             // 
-            // comboBox2
+            // cbDichVu
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(15, 108);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(243, 27);
-            comboBox2.TabIndex = 3;
+            cbDichVu.FormattingEnabled = true;
+            cbDichVu.Location = new Point(15, 108);
+            cbDichVu.Name = "cbDichVu";
+            cbDichVu.Size = new Size(243, 27);
+            cbDichVu.TabIndex = 3;
+            cbDichVu.SelectedIndexChanged += cbDichVu_SelectedIndexChanged;
             // 
             // label9
             // 
@@ -482,13 +448,14 @@
             label9.TabIndex = 2;
             label9.Text = "Dịch vụ";
             // 
-            // comboBox1
+            // cbLoaiDV
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(15, 54);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(243, 27);
-            comboBox1.TabIndex = 1;
+            cbLoaiDV.FormattingEnabled = true;
+            cbLoaiDV.Location = new Point(15, 54);
+            cbLoaiDV.Name = "cbLoaiDV";
+            cbLoaiDV.Size = new Size(243, 27);
+            cbLoaiDV.TabIndex = 1;
+            cbLoaiDV.SelectedIndexChanged += cbLoaiDV_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -501,8 +468,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(panel6);
-            groupBox1.Controls.Add(panel5);
+            groupBox1.Controls.Add(panelRoom);
             groupBox1.Controls.Add(panel4);
             groupBox1.Controls.Add(panel3);
             groupBox1.Controls.Add(panel2);
@@ -516,25 +482,34 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Danh sách phòng";
             // 
+            // panelRoom
+            // 
+            panelRoom.AutoScroll = true;
+            panelRoom.Controls.Add(panel6);
+            panelRoom.Dock = DockStyle.Right;
+            panelRoom.Location = new Point(284, 23);
+            panelRoom.Name = "panelRoom";
+            panelRoom.Size = new Size(869, 150);
+            panelRoom.TabIndex = 6;
+            // 
             // panel6
             // 
             panel6.BackColor = Color.Bisque;
-            panel6.Controls.Add(pictureBox2);
+            panel6.Controls.Add(picRoom);
             panel6.Controls.Add(label7);
-            panel6.Location = new Point(443, 26);
+            panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(111, 91);
             panel6.TabIndex = 5;
             // 
-            // pictureBox2
+            // picRoom
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(36, 13);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 36);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
+            picRoom.Location = new Point(36, 13);
+            picRoom.Name = "picRoom";
+            picRoom.Size = new Size(40, 36);
+            picRoom.SizeMode = PictureBoxSizeMode.StretchImage;
+            picRoom.TabIndex = 2;
+            picRoom.TabStop = false;
             // 
             // label7
             // 
@@ -545,36 +520,6 @@
             label7.Size = new Size(87, 19);
             label7.TabIndex = 1;
             label7.Text = "Phòng 103";
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.PowderBlue;
-            panel5.Controls.Add(pictureBox1);
-            panel5.Controls.Add(label6);
-            panel5.Location = new Point(313, 26);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(111, 91);
-            panel5.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(36, 13);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 36);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.ForeColor = SystemColors.ControlText;
-            label6.Location = new Point(13, 52);
-            label6.Name = "label6";
-            label6.Size = new Size(87, 19);
-            label6.TabIndex = 1;
-            label6.Text = "Phòng 102";
             // 
             // panel4
             // 
@@ -659,29 +604,28 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pnlMain);
             Controls.Add(pnlTitle);
-             Size = new Size(1201, 696);
+            Name = "UseServicePayment";
+            Size = new Size(1201, 696);
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
             pnlMain.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoadonDV).EndInit();
             groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgPhuThu).EndInit();
             groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoaDon).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nbGiamGia).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nbSoLuong).EndInit();
             groupBox1.ResumeLayout(false);
+            panelRoom.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRoom).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel3.ResumeLayout(false);
@@ -705,34 +649,34 @@
         private Panel panel2;
         private Label label3;
         private Label label2;
-        private Panel panel5;
+        private Panel room;
         private PictureBox pictureBox1;
-        private Label label6;
+        private Label lbTenPhong;
         private Panel panel4;
         private Label label5;
         private GroupBox groupBox2;
-        private NumericUpDown numericUpDown1;
-        private TextBox textBox1;
+        private NumericUpDown nbSoLuong;
+        private TextBox tbGia;
         private Label label10;
         private Label label11;
-        private ComboBox comboBox2;
+        private ComboBox cbDichVu;
         private Label label9;
-        private ComboBox comboBox1;
+        private ComboBox cbLoaiDV;
         private Label label8;
         private Panel panel6;
         private PictureBox pictureBox2;
         private Label label7;
         private GroupBox groupBox3;
-        private Assets.CusButton btnPayment;
-        private NumericUpDown numericUpDown2;
-        private TextBox textBox2;
+        private Assets.CusButton btnThanhToan;
+        private NumericUpDown nbGiamGia;
+        private TextBox tbTongTien;
         private Label label12;
         private Label label13;
-        private Assets.CusButton btnAddService;
+        private Assets.CusButton btnThemDV;
         private GroupBox groupBox4;
-        private DataGridView dataGridView1;
+        private DataGridView dtgHoaDon;
         private GroupBox groupBox5;
-        private DataGridView dataGridView2;
+        private DataGridView dtgPhuThu;
         private DataGridViewTextBoxColumn NameRoom;
         private DataGridViewTextBoxColumn PriceService;
         private DataGridViewTextBoxColumn DateCheckin;
@@ -740,16 +684,14 @@
         private DataGridViewTextBoxColumn PriceRoom;
         private DataGridViewTextBoxColumn OtherPrice;
         private DataGridViewTextBoxColumn Total;
-        private DataGridViewTextBoxColumn Index;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn heso;
-        private DataGridViewTextBoxColumn description;
         private GroupBox groupBox6;
-        private DataGridView dataGridView3;
+        private DataGridView dtgHoadonDV;
         private DataGridViewTextBoxColumn stt;
         private DataGridViewTextBoxColumn NameService;
         private DataGridViewTextBoxColumn Price;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn TotalService;
+        private FlowLayoutPanel panelRoom;
+        private PictureBox picRoom;
     }
 }

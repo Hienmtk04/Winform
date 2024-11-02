@@ -36,7 +36,6 @@
             btnLogin = new Button();
             tbPass = new TextBox();
             cbShowPass = new CheckBox();
-            ForgetPass = new LinkLabel();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -44,6 +43,7 @@
             label5 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             pictureBox3 = new PictureBox();
+            linkDangKy = new LinkLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -123,21 +123,12 @@
             cbShowPass.UseVisualStyleBackColor = true;
             cbShowPass.CheckedChanged += cbShowPass_CheckedChanged;
             // 
-            // ForgetPass
-            // 
-            ForgetPass.AutoSize = true;
-            ForgetPass.LinkColor = Color.DarkCyan;
-            ForgetPass.Location = new Point(725, 373);
-            ForgetPass.Name = "ForgetPass";
-            ForgetPass.Size = new Size(116, 20);
-            ForgetPass.TabIndex = 10;
-            ForgetPass.TabStop = true;
-            ForgetPass.Text = "Quên mật khẩu?";
-            // 
             // dateTimePicker1
             // 
             dateTimePicker1.CalendarFont = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker1.CalendarMonthBackground = SystemColors.HighlightText;
+            dateTimePicker1.CustomFormat = "ddd, dd/MM/yyyy";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(73, 399);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(255, 27);
@@ -198,17 +189,29 @@
             pictureBox3.TabIndex = 15;
             pictureBox3.TabStop = false;
             // 
+            // linkDangKy
+            // 
+            linkDangKy.AutoSize = true;
+            linkDangKy.LinkColor = Color.DarkCyan;
+            linkDangKy.Location = new Point(778, 373);
+            linkDangKy.Name = "linkDangKy";
+            linkDangKy.Size = new Size(63, 20);
+            linkDangKy.TabIndex = 16;
+            linkDangKy.TabStop = true;
+            linkDangKy.Text = "Đăng ký";
+            linkDangKy.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // Login
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = Color.PowderBlue;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(895, 527);
+            Controls.Add(linkDangKy);
             Controls.Add(pictureBox3);
             Controls.Add(label5);
             Controls.Add(Exit_Click);
             Controls.Add(panel1);
-            Controls.Add(ForgetPass);
             Controls.Add(cbShowPass);
             Controls.Add(tbPass);
             Controls.Add(btnLogin);
@@ -239,7 +242,6 @@
         private Button btnLogin;
         private TextBox tbPass;
         private CheckBox cbShowPass;
-        private LinkLabel ForgetPass;
         private DateTimePicker dateTimePicker1;
         private Panel panel1;
         private PictureBox pictureBox2;
@@ -247,5 +249,6 @@
         private Label label5;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private PictureBox pictureBox3;
+        private LinkLabel linkDangKy;
     }
 }

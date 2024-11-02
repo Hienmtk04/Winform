@@ -13,7 +13,9 @@ namespace HotelManage
 {
     public partial class MainPage : Form
     {
-        public MainPage()
+
+        private string _username;
+        public MainPage(string username)
         {
             InitializeComponent();
             timer1.Interval = 1000; // 1 second interval
@@ -22,18 +24,15 @@ namespace HotelManage
             // Assign the Tick event handler to the timer
             timer1.Tick += timer1_Tick;
         }
-        public void ShowAdminRecieve()
+        public void ShowAdminRecieve(string bookingCode, string customerName, string idNumber, string roomType, int maxOccupancy, decimal price, DateTime checkInDate, DateTime checkOutDate)
         {
-            // Clear existing controls in panel3
-            panel3.Controls.Clear();
-
-            // Create a new instance of AdminRecieve
             AdminRecieve adminRecieve = new AdminRecieve();
 
-            // Dock the AdminRecieve control to fill the panel3
-            adminRecieve.Dock = DockStyle.Fill;
+            // Set the booking and room details in AdminRecieve
+            adminRecieve.SetBookingDetails(bookingCode, customerName, idNumber, roomType, checkInDate, checkOutDate);
 
-            // Add AdminRecieve to panel3
+            // Show AdminRecieve in the designated panel (e.g., panel3)
+            panel3.Controls.Clear();
             panel3.Controls.Add(adminRecieve);
         }
         private void btnExit_Click(object sender, EventArgs e)
@@ -68,6 +67,17 @@ namespace HotelManage
             myUserControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(myUserControl);
         }
+        public void ShowAdminRecieve(string bookingCode, string customerName, string idNumber, string roomType, DateTime checkInDate, DateTime checkOutDate)
+        {
+            AdminRecieve adminRecieve = new AdminRecieve();
+
+            adminRecieve.SetBookingDetails(bookingCode, customerName, idNumber, roomType, checkInDate, checkOutDate);
+
+            // Show AdminRecieve in panel3 (or whichever panel you use)
+            panel3.Controls.Clear();
+            panel3.Controls.Add(adminRecieve);
+        }
+
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -94,7 +104,7 @@ namespace HotelManage
         {
             panel3.Controls.Clear();
 
-            ManagerRoom myUserControl = new ManagerRoom();
+            ManagerRooms myUserControl = new ManagerRooms();
 
             myUserControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(myUserControl);
@@ -114,7 +124,7 @@ namespace HotelManage
         {
             panel3.Controls.Clear();
 
-            ManagerService myUserControl = new ManagerService();
+            managerService myUserControl = new managerService();
 
             myUserControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(myUserControl);

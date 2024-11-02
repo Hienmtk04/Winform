@@ -50,13 +50,21 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "BCrypt.Net": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
             "EPPlus": {
               "target": "Package",
               "version": "[7.4.1, )"
             },
-            "Microsoft.Office.Interop.Excel": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[15.0.4795.1001, )"
+              "version": "[5.2.2, )"
+            },
+            "Microsoft.Office.Excel": {
+              "target": "Package",
+              "version": "[14.0.4760.1000, )"
             },
             "Microsoft.Office365.Discovery": {
               "target": "Package",

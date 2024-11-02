@@ -34,7 +34,6 @@
             btnUse_Payment = new Button();
             pictureBox4 = new PictureBox();
             btnRules = new Button();
-            btnMonitor = new Button();
             btnServiceMng = new Button();
             btnBooking = new Button();
             btnRecieve = new Button();
@@ -72,7 +71,6 @@
             panel2.Controls.Add(btnUse_Payment);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(btnRules);
-            panel2.Controls.Add(btnMonitor);
             panel2.Controls.Add(btnServiceMng);
             panel2.Controls.Add(btnBooking);
             panel2.Controls.Add(btnRecieve);
@@ -116,26 +114,13 @@
             btnRules.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             btnRules.Image = (Image)resources.GetObject("btnRules.Image");
             btnRules.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRules.Location = new Point(22, 635);
+            btnRules.Location = new Point(22, 582);
             btnRules.Name = "btnRules";
             btnRules.Size = new Size(300, 48);
             btnRules.TabIndex = 13;
             btnRules.Text = "Quy định";
             btnRules.UseVisualStyleBackColor = true;
             btnRules.Click += btnRules_Click;
-            // 
-            // btnMonitor
-            // 
-            btnMonitor.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            btnMonitor.Image = (Image)resources.GetObject("btnMonitor.Image");
-            btnMonitor.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMonitor.Location = new Point(22, 581);
-            btnMonitor.Name = "btnMonitor";
-            btnMonitor.Size = new Size(300, 48);
-            btnMonitor.TabIndex = 11;
-            btnMonitor.Text = "Thống kê doanh thu";
-            btnMonitor.UseVisualStyleBackColor = true;
-            btnMonitor.Click += btnMonitor_Click;
             // 
             // btnServiceMng
             // 
@@ -425,7 +410,6 @@
         private Button btnRecieve;
         private Button btnBooking;
         private Button btnRules;
-        private Button btnMonitor;
         private Button btnServiceMng;
         private Panel panel3;
         private System.Windows.Forms.Timer timer1;

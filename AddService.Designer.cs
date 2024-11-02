@@ -31,21 +31,23 @@
             pnlTitle = new Panel();
             lbTitle = new Label();
             pnlMain = new Panel();
-            groupBox1 = new GroupBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            comboBox1 = new ComboBox();
             groupBox4 = new GroupBox();
-            btnExit = new Assets.CusButton();
-            cusButton5 = new Assets.CusButton();
             lbExit = new Label();
+            btnClose = new Assets.CusButton();
+            btnAddService = new Assets.CusButton();
+            groupBox1 = new GroupBox();
+            tbGia_DV = new TextBox();
+            label4 = new Label();
+            cbLoai_DV = new ComboBox();
+            label3 = new Label();
+            tbTen_DV = new TextBox();
+            label2 = new Label();
+            tbMa_DV = new TextBox();
+            label1 = new Label();
             pnlTitle.SuspendLayout();
             pnlMain.SuspendLayout();
-            groupBox1.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlTitle
@@ -78,80 +80,11 @@
             pnlMain.Size = new Size(601, 287);
             pnlMain.TabIndex = 1;
             // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.ForeColor = Color.Teal;
-            groupBox1.Location = new Point(22, 18);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(558, 154);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin dịch vụ";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(15, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(93, 19);
-            label1.TabIndex = 0;
-            label1.Text = "Tên dịch vụ";
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(15, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(249, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(289, 49);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 27);
-            textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(289, 27);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 19);
-            label2.TabIndex = 2;
-            label2.Text = "Giá";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(15, 88);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 19);
-            label3.TabIndex = 4;
-            label3.Text = "Loại dịch vụ";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Ăn uống", "Giải trí", "Tiện ích", "Sức khỏe" });
-            comboBox1.Location = new Point(15, 110);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(249, 27);
-            comboBox1.TabIndex = 5;
-            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(lbExit);
-            groupBox4.Controls.Add(btnExit);
-            groupBox4.Controls.Add(cusButton5);
+            groupBox4.Controls.Add(btnClose);
+            groupBox4.Controls.Add(btnAddService);
             groupBox4.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox4.ForeColor = Color.Teal;
             groupBox4.Location = new Point(22, 178);
@@ -160,43 +93,6 @@
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             groupBox4.Text = "Chức năng";
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.Teal;
-            btnExit.BackgroundColor = Color.Teal;
-            btnExit.BorderColor = Color.Teal;
-            btnExit.BorderRadius = 20;
-            btnExit.BorderSize = 1;
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(298, 46);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(221, 35);
-            btnExit.TabIndex = 11;
-            btnExit.Text = "Đóng";
-            btnExit.TextColor = Color.White;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
-            // 
-            // cusButton5
-            // 
-            cusButton5.BackColor = Color.Teal;
-            cusButton5.BackgroundColor = Color.Teal;
-            cusButton5.BorderColor = Color.Teal;
-            cusButton5.BorderRadius = 20;
-            cusButton5.BorderSize = 1;
-            cusButton5.FlatAppearance.BorderSize = 0;
-            cusButton5.FlatStyle = FlatStyle.Flat;
-            cusButton5.ForeColor = Color.White;
-            cusButton5.Location = new Point(32, 46);
-            cusButton5.Name = "cusButton5";
-            cusButton5.Size = new Size(221, 35);
-            cusButton5.TabIndex = 10;
-            cusButton5.Text = "Thêm dịch vụ";
-            cusButton5.TextColor = Color.White;
-            cusButton5.UseVisualStyleBackColor = false;
             // 
             // lbExit
             // 
@@ -209,6 +105,132 @@
             lbExit.TabIndex = 1;
             lbExit.Text = "X";
             lbExit.Click += lbExit_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Teal;
+            btnClose.BackgroundColor = Color.Teal;
+            btnClose.BorderColor = Color.Teal;
+            btnClose.BorderRadius = 20;
+            btnClose.BorderSize = 1;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(298, 46);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(221, 35);
+            btnClose.TabIndex = 11;
+            btnClose.Text = "Đóng";
+            btnClose.TextColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // btnAddService
+            // 
+            btnAddService.BackColor = Color.Teal;
+            btnAddService.BackgroundColor = Color.Teal;
+            btnAddService.BorderColor = Color.Teal;
+            btnAddService.BorderRadius = 20;
+            btnAddService.BorderSize = 1;
+            btnAddService.FlatAppearance.BorderSize = 0;
+            btnAddService.FlatStyle = FlatStyle.Flat;
+            btnAddService.ForeColor = Color.White;
+            btnAddService.Location = new Point(32, 46);
+            btnAddService.Name = "btnAddService";
+            btnAddService.Size = new Size(221, 35);
+            btnAddService.TabIndex = 10;
+            btnAddService.Text = "Thêm dịch vụ";
+            btnAddService.TextColor = Color.White;
+            btnAddService.UseVisualStyleBackColor = false;
+            btnAddService.Click += btnAddService_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(tbGia_DV);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(cbLoai_DV);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(tbTen_DV);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(tbMa_DV);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.Teal;
+            groupBox1.Location = new Point(22, 18);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(558, 154);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin dịch vụ";
+            // 
+            // tbGia_DV
+            // 
+            tbGia_DV.BorderStyle = BorderStyle.FixedSingle;
+            tbGia_DV.Location = new Point(289, 110);
+            tbGia_DV.Name = "tbGia_DV";
+            tbGia_DV.Size = new Size(255, 27);
+            tbGia_DV.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(289, 88);
+            label4.Name = "label4";
+            label4.Size = new Size(37, 19);
+            label4.TabIndex = 6;
+            label4.Text = "Giá";
+            // 
+            // cbLoai_DV
+            // 
+            cbLoai_DV.FormattingEnabled = true;
+            cbLoai_DV.Items.AddRange(new object[] { "Ăn uống", "Giải trí", "Tiện ích", "Sức khỏe" });
+            cbLoai_DV.Location = new Point(15, 110);
+            cbLoai_DV.Name = "cbLoai_DV";
+            cbLoai_DV.Size = new Size(249, 27);
+            cbLoai_DV.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(15, 88);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 19);
+            label3.TabIndex = 4;
+            label3.Text = "Loại dịch vụ";
+            // 
+            // tbTen_DV
+            // 
+            tbTen_DV.BorderStyle = BorderStyle.FixedSingle;
+            tbTen_DV.Location = new Point(289, 49);
+            tbTen_DV.Name = "tbTen_DV";
+            tbTen_DV.Size = new Size(255, 27);
+            tbTen_DV.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(289, 27);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 19);
+            label2.TabIndex = 2;
+            label2.Text = "Tên dịch vụ";
+            // 
+            // tbMa_DV
+            // 
+            tbMa_DV.BorderStyle = BorderStyle.FixedSingle;
+            tbMa_DV.Location = new Point(15, 49);
+            tbMa_DV.Name = "tbMa_DV";
+            tbMa_DV.Size = new Size(249, 27);
+            tbMa_DV.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 19);
+            label1.TabIndex = 0;
+            label1.Text = "Mã dịch vụ";
             // 
             // AddService
             // 
@@ -224,10 +246,10 @@
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
             pnlMain.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -238,14 +260,16 @@
         private Panel pnlMain;
         private GroupBox groupBox1;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cbLoai_DV;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox tbTen_DV;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox tbMa_DV;
         private GroupBox groupBox4;
-        private Assets.CusButton btnExit;
-        private Assets.CusButton cusButton5;
+        private Assets.CusButton btnClose;
+        private Assets.CusButton btnAddService;
         private Label lbExit;
+        private TextBox tbGia_DV;
+        private Label label4;
     }
 }

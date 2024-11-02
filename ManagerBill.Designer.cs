@@ -32,45 +32,34 @@
             lbTitle = new Label();
             pnlMain = new Panel();
             lstRoom = new GroupBox();
-            cusButton2 = new Assets.CusButton();
-            dtgListRoom = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            NameRoom = new DataGridViewTextBoxColumn();
-            CustomerName = new DataGridViewTextBoxColumn();
-            DateCreate = new DataGridViewTextBoxColumn();
-            status = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            Discount = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
+            btnExport = new Assets.CusButton();
+            dtgHoaDon = new DataGridView();
             groupBox1 = new GroupBox();
-            textBox9 = new TextBox();
+            cbMaHoaDon = new ComboBox();
+            tbThanhTien = new TextBox();
             label9 = new Label();
-            textBox8 = new TextBox();
-            label1 = new Label();
-            textBox5 = new TextBox();
+            tbNgayTao = new TextBox();
+            tbGiamGia = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            tbDonGia = new TextBox();
             label7 = new Label();
-            textBox7 = new TextBox();
             label8 = new Label();
-            textBox4 = new TextBox();
+            tbNhanVien = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            tbTenPhong = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
             label2 = new Label();
             groupBox4 = new GroupBox();
-            cusButton4 = new Assets.CusButton();
-            cusButton5 = new Assets.CusButton();
+            btnDong = new Assets.CusButton();
             groupBox2 = new GroupBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            cusButton1 = new Assets.CusButton();
+            tbSearch = new TextBox();
+            cbTimKiemTheo = new ComboBox();
+            btnTimKiem = new Assets.CusButton();
             label5 = new Label();
             pnlTitle.SuspendLayout();
             pnlMain.SuspendLayout();
             lstRoom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgListRoom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoaDon).BeginInit();
             groupBox1.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -112,8 +101,8 @@
             // 
             // lstRoom
             // 
-            lstRoom.Controls.Add(cusButton2);
-            lstRoom.Controls.Add(dtgListRoom);
+            lstRoom.Controls.Add(btnExport);
+            lstRoom.Controls.Add(dtgHoaDon);
             lstRoom.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lstRoom.ForeColor = Color.Teal;
             lstRoom.Location = new Point(51, 295);
@@ -121,110 +110,52 @@
             lstRoom.Size = new Size(1082, 524);
             lstRoom.TabIndex = 13;
             lstRoom.TabStop = false;
-            lstRoom.Text = "Danh sách phòng";
+            lstRoom.Text = "Danh sách hóa đơn";
             // 
-            // cusButton2
+            // btnExport
             // 
-            cusButton2.BackColor = Color.Teal;
-            cusButton2.BackgroundColor = Color.Teal;
-            cusButton2.BorderColor = Color.Teal;
-            cusButton2.BorderRadius = 20;
-            cusButton2.BorderSize = 1;
-            cusButton2.FlatAppearance.BorderSize = 0;
-            cusButton2.FlatStyle = FlatStyle.Flat;
-            cusButton2.ForeColor = Color.White;
-            cusButton2.Location = new Point(944, 26);
-            cusButton2.Name = "cusButton2";
-            cusButton2.Size = new Size(104, 32);
-            cusButton2.TabIndex = 12;
-            cusButton2.Text = "Xuất";
-            cusButton2.TextColor = Color.White;
-            cusButton2.UseVisualStyleBackColor = false;
+            btnExport.BackColor = Color.Teal;
+            btnExport.BackgroundColor = Color.Teal;
+            btnExport.BorderColor = Color.Teal;
+            btnExport.BorderRadius = 20;
+            btnExport.BorderSize = 1;
+            btnExport.FlatAppearance.BorderSize = 0;
+            btnExport.FlatStyle = FlatStyle.Flat;
+            btnExport.ForeColor = Color.White;
+            btnExport.Location = new Point(944, 26);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(104, 32);
+            btnExport.TabIndex = 12;
+            btnExport.Text = "Xuất";
+            btnExport.TextColor = Color.White;
+            btnExport.UseVisualStyleBackColor = false;
+            btnExport.Click += btnXuat_Click;
             // 
-            // dtgListRoom
+            // dtgHoaDon
             // 
-            dtgListRoom.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dtgListRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgListRoom.Columns.AddRange(new DataGridViewColumn[] { ID, NameRoom, CustomerName, DateCreate, status, Price, Discount, Total });
-            dtgListRoom.Location = new Point(19, 64);
-            dtgListRoom.Name = "dtgListRoom";
-            dtgListRoom.RowHeadersWidth = 51;
-            dtgListRoom.Size = new Size(1043, 370);
-            dtgListRoom.TabIndex = 0;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "Mã hóa đơn";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.Width = 125;
-            // 
-            // NameRoom
-            // 
-            NameRoom.HeaderText = "Tên phòng";
-            NameRoom.MinimumWidth = 6;
-            NameRoom.Name = "NameRoom";
-            NameRoom.Width = 120;
-            // 
-            // CustomerName
-            // 
-            CustomerName.HeaderText = "Tên khách hàng";
-            CustomerName.MinimumWidth = 6;
-            CustomerName.Name = "CustomerName";
-            CustomerName.Width = 200;
-            // 
-            // DateCreate
-            // 
-            DateCreate.HeaderText = "Ngày tạo";
-            DateCreate.MinimumWidth = 6;
-            DateCreate.Name = "DateCreate";
-            DateCreate.Width = 120;
-            // 
-            // status
-            // 
-            status.HeaderText = "Trạng thái";
-            status.MinimumWidth = 6;
-            status.Name = "status";
-            status.Width = 110;
-            // 
-            // Price
-            // 
-            Price.HeaderText = "Đơn giá";
-            Price.MinimumWidth = 6;
-            Price.Name = "Price";
-            Price.Width = 130;
-            // 
-            // Discount
-            // 
-            Discount.HeaderText = "Giảm giá";
-            Discount.MinimumWidth = 6;
-            Discount.Name = "Discount";
-            Discount.Width = 80;
-            // 
-            // Total
-            // 
-            Total.HeaderText = "Thành tiền";
-            Total.MinimumWidth = 6;
-            Total.Name = "Total";
-            Total.Width = 130;
+            dtgHoaDon.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dtgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgHoaDon.Location = new Point(21, 64);
+            dtgHoaDon.Name = "dtgHoaDon";
+            dtgHoaDon.RowHeadersWidth = 51;
+            dtgHoaDon.Size = new Size(1041, 370);
+            dtgHoaDon.TabIndex = 0;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox9);
+            groupBox1.Controls.Add(cbMaHoaDon);
+            groupBox1.Controls.Add(tbThanhTien);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(textBox8);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(tbNgayTao);
+            groupBox1.Controls.Add(tbGiamGia);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(tbDonGia);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox7);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(tbNhanVien);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(tbTenPhong);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
             groupBox1.ForeColor = Color.Teal;
@@ -235,86 +166,77 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin hóa đơn";
             // 
-            // textBox9
+            // cbMaHoaDon
             // 
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Font = new Font("Times New Roman", 10.2F);
-            textBox9.Location = new Point(295, 213);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(268, 27);
-            textBox9.TabIndex = 19;
+            cbMaHoaDon.FormattingEnabled = true;
+            cbMaHoaDon.Items.AddRange(new object[] { "Mã hóa đơn", "Tên khách hàng", "Số CCCD/CMND", "Số điện thoại" });
+            cbMaHoaDon.Location = new Point(16, 54);
+            cbMaHoaDon.Name = "cbMaHoaDon";
+            cbMaHoaDon.Size = new Size(261, 27);
+            cbMaHoaDon.TabIndex = 10;
+            // 
+            // tbThanhTien
+            // 
+            tbThanhTien.BorderStyle = BorderStyle.FixedSingle;
+            tbThanhTien.Font = new Font("Times New Roman", 10.2F);
+            tbThanhTien.Location = new Point(297, 159);
+            tbThanhTien.Name = "tbThanhTien";
+            tbThanhTien.Size = new Size(268, 27);
+            tbThanhTien.TabIndex = 19;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(295, 190);
+            label9.Location = new Point(297, 138);
             label9.Name = "label9";
             label9.Size = new Size(87, 19);
             label9.TabIndex = 18;
             label9.Text = "Thành tiền";
             // 
-            // textBox8
+            // tbNgayTao
             // 
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Font = new Font("Times New Roman", 10.2F);
-            textBox8.Location = new Point(16, 213);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(261, 27);
-            textBox8.TabIndex = 17;
+            tbNgayTao.BorderStyle = BorderStyle.FixedSingle;
+            tbNgayTao.Font = new Font("Times New Roman", 10.2F);
+            tbNgayTao.Location = new Point(16, 213);
+            tbNgayTao.Name = "tbNgayTao";
+            tbNgayTao.Size = new Size(261, 27);
+            tbNgayTao.TabIndex = 17;
             // 
-            // label1
+            // tbGiamGia
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(295, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 19);
-            label1.TabIndex = 16;
-            label1.Text = "Trạng thái";
-            // 
-            // textBox5
-            // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Times New Roman", 10.2F);
-            textBox5.Location = new Point(295, 159);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(268, 27);
-            textBox5.TabIndex = 15;
+            tbGiamGia.BorderStyle = BorderStyle.FixedSingle;
+            tbGiamGia.Font = new Font("Times New Roman", 10.2F);
+            tbGiamGia.Location = new Point(297, 106);
+            tbGiamGia.Name = "tbGiamGia";
+            tbGiamGia.Size = new Size(268, 27);
+            tbGiamGia.TabIndex = 15;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(295, 136);
+            label6.Location = new Point(297, 84);
             label6.Name = "label6";
             label6.Size = new Size(78, 19);
             label6.TabIndex = 14;
             label6.Text = "Giảm giá";
             // 
-            // textBox6
+            // tbDonGia
             // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Font = new Font("Times New Roman", 10.2F);
-            textBox6.Location = new Point(295, 106);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(268, 27);
-            textBox6.TabIndex = 13;
+            tbDonGia.BorderStyle = BorderStyle.FixedSingle;
+            tbDonGia.Font = new Font("Times New Roman", 10.2F);
+            tbDonGia.Location = new Point(297, 53);
+            tbDonGia.Name = "tbDonGia";
+            tbDonGia.Size = new Size(268, 27);
+            tbDonGia.TabIndex = 13;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(295, 83);
+            label7.Location = new Point(297, 31);
             label7.Name = "label7";
             label7.Size = new Size(66, 19);
             label7.TabIndex = 12;
             label7.Text = "Đơn giá";
-            // 
-            // textBox7
-            // 
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Font = new Font("Times New Roman", 10.2F);
-            textBox7.Location = new Point(295, 54);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(268, 27);
-            textBox7.TabIndex = 11;
             // 
             // label8
             // 
@@ -325,14 +247,14 @@
             label8.TabIndex = 10;
             label8.Text = "Ngày tạo";
             // 
-            // textBox4
+            // tbNhanVien
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Font = new Font("Times New Roman", 10.2F);
-            textBox4.Location = new Point(16, 159);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(261, 27);
-            textBox4.TabIndex = 9;
+            tbNhanVien.BorderStyle = BorderStyle.FixedSingle;
+            tbNhanVien.Font = new Font("Times New Roman", 10.2F);
+            tbNhanVien.Location = new Point(16, 159);
+            tbNhanVien.Name = "tbNhanVien";
+            tbNhanVien.Size = new Size(261, 27);
+            tbNhanVien.TabIndex = 9;
             // 
             // label4
             // 
@@ -343,14 +265,14 @@
             label4.TabIndex = 8;
             label4.Text = "Nhân viên tạo";
             // 
-            // textBox3
+            // tbTenPhong
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Times New Roman", 10.2F);
-            textBox3.Location = new Point(16, 106);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(261, 27);
-            textBox3.TabIndex = 7;
+            tbTenPhong.BorderStyle = BorderStyle.FixedSingle;
+            tbTenPhong.Font = new Font("Times New Roman", 10.2F);
+            tbTenPhong.Location = new Point(16, 106);
+            tbTenPhong.Name = "tbTenPhong";
+            tbTenPhong.Size = new Size(261, 27);
+            tbTenPhong.TabIndex = 7;
             // 
             // label3
             // 
@@ -360,15 +282,6 @@
             label3.Size = new Size(85, 19);
             label3.TabIndex = 6;
             label3.Text = "Tên phòng";
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Times New Roman", 10.2F);
-            textBox1.Location = new Point(16, 54);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 27);
-            textBox1.TabIndex = 5;
             // 
             // label2
             // 
@@ -381,8 +294,7 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(cusButton4);
-            groupBox4.Controls.Add(cusButton5);
+            groupBox4.Controls.Add(btnDong);
             groupBox4.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox4.ForeColor = Color.Teal;
             groupBox4.Location = new Point(53, 175);
@@ -392,47 +304,30 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Chức năng";
             // 
-            // cusButton4
+            // btnDong
             // 
-            cusButton4.BackColor = Color.Teal;
-            cusButton4.BackgroundColor = Color.Teal;
-            cusButton4.BorderColor = Color.Teal;
-            cusButton4.BorderRadius = 20;
-            cusButton4.BorderSize = 1;
-            cusButton4.FlatAppearance.BorderSize = 0;
-            cusButton4.FlatStyle = FlatStyle.Flat;
-            cusButton4.ForeColor = Color.White;
-            cusButton4.Location = new Point(234, 36);
-            cusButton4.Name = "cusButton4";
-            cusButton4.Size = new Size(189, 35);
-            cusButton4.TabIndex = 11;
-            cusButton4.Text = "Đóng";
-            cusButton4.TextColor = Color.White;
-            cusButton4.UseVisualStyleBackColor = false;
-            // 
-            // cusButton5
-            // 
-            cusButton5.BackColor = Color.Teal;
-            cusButton5.BackgroundColor = Color.Teal;
-            cusButton5.BorderColor = Color.Teal;
-            cusButton5.BorderRadius = 20;
-            cusButton5.BorderSize = 1;
-            cusButton5.FlatAppearance.BorderSize = 0;
-            cusButton5.FlatStyle = FlatStyle.Flat;
-            cusButton5.ForeColor = Color.White;
-            cusButton5.Location = new Point(22, 36);
-            cusButton5.Name = "cusButton5";
-            cusButton5.Size = new Size(189, 35);
-            cusButton5.TabIndex = 10;
-            cusButton5.Text = "Chi tiết hóa đơn";
-            cusButton5.TextColor = Color.White;
-            cusButton5.UseVisualStyleBackColor = false;
+            btnDong.BackColor = Color.Teal;
+            btnDong.BackgroundColor = Color.Teal;
+            btnDong.BorderColor = Color.Teal;
+            btnDong.BorderRadius = 20;
+            btnDong.BorderSize = 1;
+            btnDong.FlatAppearance.BorderSize = 0;
+            btnDong.FlatStyle = FlatStyle.Flat;
+            btnDong.ForeColor = Color.White;
+            btnDong.Location = new Point(81, 37);
+            btnDong.Name = "btnDong";
+            btnDong.Size = new Size(291, 35);
+            btnDong.TabIndex = 11;
+            btnDong.Text = "Đóng";
+            btnDong.TextColor = Color.White;
+            btnDong.UseVisualStyleBackColor = false;
+            btnDong.Click += btnDong_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(cusButton1);
+            groupBox2.Controls.Add(tbSearch);
+            groupBox2.Controls.Add(cbTimKiemTheo);
+            groupBox2.Controls.Add(btnTimKiem);
             groupBox2.Controls.Add(label5);
             groupBox2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold);
             groupBox2.ForeColor = Color.Teal;
@@ -443,40 +338,41 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Tìm kiếm";
             // 
-            // textBox2
+            // tbSearch
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(10, 81);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(259, 27);
-            textBox2.TabIndex = 9;
+            tbSearch.BorderStyle = BorderStyle.FixedSingle;
+            tbSearch.Location = new Point(10, 81);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new Size(259, 27);
+            tbSearch.TabIndex = 9;
             // 
-            // comboBox1
+            // cbTimKiemTheo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Mã hóa đơn", "Tên khách hàng", "Số CCCD/CMND", "Số điện thoại" });
-            comboBox1.Location = new Point(132, 31);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(291, 27);
-            comboBox1.TabIndex = 8;
+            cbTimKiemTheo.FormattingEnabled = true;
+            cbTimKiemTheo.Items.AddRange(new object[] { "Mã hóa đơn", "Tên khách hàng", "Số CCCD/CMND", "Số điện thoại" });
+            cbTimKiemTheo.Location = new Point(132, 31);
+            cbTimKiemTheo.Name = "cbTimKiemTheo";
+            cbTimKiemTheo.Size = new Size(291, 27);
+            cbTimKiemTheo.TabIndex = 8;
             // 
-            // cusButton1
+            // btnTimKiem
             // 
-            cusButton1.BackColor = Color.Teal;
-            cusButton1.BackgroundColor = Color.Teal;
-            cusButton1.BorderColor = Color.PaleVioletRed;
-            cusButton1.BorderRadius = 20;
-            cusButton1.BorderSize = 0;
-            cusButton1.FlatAppearance.BorderSize = 0;
-            cusButton1.FlatStyle = FlatStyle.Flat;
-            cusButton1.ForeColor = Color.White;
-            cusButton1.Location = new Point(290, 76);
-            cusButton1.Name = "cusButton1";
-            cusButton1.Size = new Size(133, 35);
-            cusButton1.TabIndex = 7;
-            cusButton1.Text = "Tìm kiếm";
-            cusButton1.TextColor = Color.White;
-            cusButton1.UseVisualStyleBackColor = false;
+            btnTimKiem.BackColor = Color.Teal;
+            btnTimKiem.BackgroundColor = Color.Teal;
+            btnTimKiem.BorderColor = Color.PaleVioletRed;
+            btnTimKiem.BorderRadius = 20;
+            btnTimKiem.BorderSize = 0;
+            btnTimKiem.FlatAppearance.BorderSize = 0;
+            btnTimKiem.FlatStyle = FlatStyle.Flat;
+            btnTimKiem.ForeColor = Color.White;
+            btnTimKiem.Location = new Point(290, 76);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(133, 35);
+            btnTimKiem.TabIndex = 7;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.TextColor = Color.White;
+            btnTimKiem.UseVisualStyleBackColor = false;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // label5
             // 
@@ -499,7 +395,7 @@
             pnlTitle.PerformLayout();
             pnlMain.ResumeLayout(false);
             lstRoom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgListRoom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgHoaDon).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -514,40 +410,29 @@
         private Label lbTitle;
         private Panel pnlMain;
         private GroupBox lstRoom;
-        private DataGridView dtgListRoom;
+        private DataGridView dtgHoaDon;
         private GroupBox groupBox1;
-        private TextBox textBox5;
+        private TextBox tbGiamGia;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox tbDonGia;
         private Label label7;
-        private TextBox textBox7;
         private Label label8;
-        private TextBox textBox4;
+        private TextBox tbNhanVien;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox tbTenPhong;
         private Label label3;
-        private TextBox textBox1;
         private Label label2;
-        private GroupBox groupBox4;
-        private Assets.CusButton cusButton4;
-        private Assets.CusButton cusButton5;
         private GroupBox groupBox2;
-        private Assets.CusButton cusButton1;
+        private Assets.CusButton btnTimKiem;
         private Label label5;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox9;
+        private TextBox tbSearch;
+        private ComboBox cbTimKiemTheo;
+        private TextBox tbThanhTien;
         private Label label9;
-        private TextBox textBox8;
-        private Label label1;
-        private Assets.CusButton cusButton2;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn NameRoom;
-        private DataGridViewTextBoxColumn CustomerName;
-        private DataGridViewTextBoxColumn DateCreate;
-        private DataGridViewTextBoxColumn status;
-        private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn Discount;
-        private DataGridViewTextBoxColumn Total;
+        private TextBox tbNgayTao;
+        private Assets.CusButton btnExport;
+        private ComboBox cbMaHoaDon;
+        private GroupBox groupBox4;
+        private Assets.CusButton btnDong;
     }
 }
